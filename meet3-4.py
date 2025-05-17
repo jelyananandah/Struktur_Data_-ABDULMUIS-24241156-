@@ -1,13 +1,18 @@
-alas = int(input("Masukkan alas segitiga: "))
-tinggi = int(input("Masukkan tinggi segitiga: "))
+# Meminta input dari pengguna
+panjang = int(input("Masukkan panjang persegi panjang: "))
+lebar = int(input("Masukkan lebar persegi panjang: "))
 
-if alas > 0 and tinggi > 0:
+# Mengecek apakah input valid (lebih dari 0)
+if panjang > 0 and lebar > 0:
 
-    luas = 0.5 * alas * tinggi
-    print(f"\nLuas segitiga adalah: {luas:.2f}\n")
-    
-    print("Gambar segitiga:")
-    for i in range(1, tinggi + 1):
-        print(' ' * (tinggi - i) + '*' * (2 * i - 1))
+    # Menghitung luas
+    luas = panjang * lebar
+    print(f"\nLuas persegi panjang adalah: {luas:.2f}\n")
+
+    # Menampilkan bentuk persegi panjang dengan bintang
+    print("Gambar persegi panjang:")
+    for i in range(lebar):  # lebar = jumlah baris
+        print('*' * panjang)  # panjang = jumlah bintang per baris
+
 else:
-    print("Alas dan tinggi harus lebih dari 0!")
+    print("Panjang dan lebar harus lebih dari 0!")
